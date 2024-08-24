@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "authors": ["Justin Benge <justinbng36@gmail.com>"],
   "description": "Apex language support for Zed",
-  "repository": "",
+  "repository": "https://github.com/jbenge1/zed-apex-extension.git",
   "languages": {
     "Apex": "languages/apex"
   },
