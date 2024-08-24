@@ -1,0 +1,12 @@
+id = "apex"
+name = "Apex"
+description = "Apex language support for Zed"
+version = "0.0.1"
+schema_version = 1
+authors = ["Justin Benge <justinbng36@gmail.com"]
+repository = "https://github.com/jbenge1/zed-apex-extension.git"
+
+[grammars.apex]
+repository = "https://github.com/aheber/tree-sitter-sfapex.git"
+commit = "c99ad4b16d112fea91745e3f1b769754239fdaba"
+path = "apex"
