@@ -1,5 +1,5 @@
 /target
-grammars/apex
+grammars/*
 *.wasm
 .DS_Store
 *.lock
