@@ -8,7 +8,7 @@ repository = "https://github.com/jbenge1/zed-apex-extension.git"
 
 [language_servers.apex-ls]
 name = "ApexLs"
-languages = ["Apex"]
+language = "Apex"
 
 [grammars.apex]
 repository = "https://github.com/aheber/tree-sitter-sfapex.git"
