@@ -1,0 +1,49 @@
+name = "SOQL"
+grammar = "soql"
+path_suffixes = ["soql"]
+line_comments = ["//"]
+autoclose_before = ";:.,=}])>` \n\t\""
+
+brackets = [
+    { start = "[", end = "]", close = true, newline = true }, # For SOQL queries in Apex
+    { start = "(", end = ")", close = true, newline = false },
+    { start = "'", end = "'", close = true, newline = false, not_in = [
+        "string",
+    ] },
+]
+
+scope_rules = [
+    { regex = "\\bSELECT\\b", scopes = [
+        "keyword",
+    ] },
+    { regex = "\\bFROM\\b", scopes = [
+        "keyword",
+    ] },
+    { regex = "\\bWHERE\\b", scopes = [
+        "keyword",
+    ] },
+    { regex = "\\bGROUP BY\\b", scopes = [
+        "keyword",
+    ] },
+    { regex = "\\bHAVING\\b", scopes = [
+        "keyword",
+    ] },
+    { regex = "\\bORDER BY\\b", scopes = [
+        "keyword",
+    ] },
+    { regex = "\\bLIMIT\\b", scopes = [
+        "keyword",
+    ] },
+    { regex = "\\bOFFSET\\b", scopes = [
+        "keyword",
+    ] },
+]
+
+indent_rules = [
+    { regex = "\\bSELECT\\b", increase_indent = true },
+    { regex = "\\bFROM\\b", decrease_indent = true, increase_indent = true },
+    { regex = "\\bWHERE\\b", decrease_indent = true, increase_indent = true },
+    { regex = "\\bGROUP BY\\b", decrease_indent = true, increase_indent = true },
+    { regex = "\\bHAVING\\b", decrease_indent = true, increase_indent = true },
+    { regex = "\\bORDER BY\\b", decrease_indent = true, increase_indent = true },
+]
