@@ -15,9 +15,12 @@ impl zed::Extension for ApexExtension {
         let Some(apex_path) = worktree.which("apex-jorje-lsp.jar") else {
             return Err("Apex not available".to_string());
         };
+        let Some(java_path) = worktree.which("java") else {
+            return Err("Java not on path".to_string());
+        };
 
         Ok(zed::Command {
-            command: "java".to_string(),
+            command: java_path.to_string(),
             args: vec![
                 "-cp".to_string(),
                 apex_path.to_string(),
