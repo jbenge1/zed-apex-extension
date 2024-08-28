@@ -1,0 +1,74 @@
+[
+  {
+    "label": "SF: Authorize an Org",
+    "command": "sf org login web --set-default",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "SF: Open Default Org",
+    "command": "sf org open",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "SF: List All Aliases",
+    "command": "sf org list",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
+    "label": "SF: Run Apex Test",
+    "command": "sf apex run test --class-names $ZED_STEM --synchronous --result-format human",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
+    "label": "SF: Run This Apex Test",
+    "command": "sf apex run test  --tests $ZED_STEM.$ZED_SYMBOL --synchronous --result-format human",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
+  },
+  {
+    "label": "SF: Deploy This Source to Org",
+    "command": "sf project deploy start --metadata ApexClass:$ZED_STEM --ignore-conflicts",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "SF: Retrieve Source from Org",
+    "command": "sf project retrieve start --metadata ApexClass:$ZED_STEM --ignore-conflicts",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "on_success",
+    "shell": "system"
+  },
+  {
+    "label": "SF: Run Selected Anonymous Apex",
+    "command": "sf apex run --file $ZED_FILENAME",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "hide": "never",
+    "shell": "system"
+  }
+]
