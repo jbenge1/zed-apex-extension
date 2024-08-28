@@ -6,8 +6,8 @@ schema_version = 1
 authors = ["Justin Benge <justinbng36@gmail.com"]
 repository = "https://github.com/jbenge1/zed-apex-extension.git"
 
-[language_servers.apex-ls]
-name = "ApexLs"
+[language_servers.apex]
+name = "Apex"
 language = "Apex"
 
 [grammars.apex]

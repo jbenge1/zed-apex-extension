@@ -1,0 +1,15 @@
+cargo-features = ["edition2024"]
+
+[package]
+name = "Apex"
+version = "0.0.2"
+edition = "2024"
+publish = false
+
+[lib]
+path = "src/apex.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+zed_extension_api = "0.1.0"
+log = "0.4"
