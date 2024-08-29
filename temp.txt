@@ -1,0 +1,35 @@
+  // {
+  //   "label": "SF: Run This Apex Test",
+  //   "command": "sf apex run test",
+  //   "args": [
+  //     "--tests",
+  //     "$ZED_SYMBOL",
+  //     "--synchronous",
+  //     "--result-format",
+  //     "human"
+  //   ],
+  //   "tags": ["apex-test"],
+  //   "use_new_terminal": false,
+  //   "allow_concurrent_runs": false,
+  //   "reveal": "always",
+  //   "hide": "never",
+  //   "shell": "system"
+  // },
+
+
+; (
+;     (method_declaration
+;         (modifiers (annotation
+;             [((identifier) @_attribute)
+;             (scoped_identifier (identifier) @_attribute)
+;             ])
+;             (#eq? @_attribute "isTest")
+;             .
+;             (modifier) *
+;             .
+;         )
+;     .
+;     (type_identifier) *
+;     .
+;     name: (_) @run)
+; ) @apex-test
